@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-success ">
+
+<div class="container mt-5 ">
+    <div class="row">
+        <div class= "col-md-6 offset-4 bg-info">
+      <h2> register here</h2>
+      <% include ./partials/messages %>
+    <form  action="/register" method="POST">
+    <input type="text" name = "name" placeholder="firstname"
+     class ="form-control" id="name" 
+     value="<%= typeof name != 'undefined' ? name :   '' %>"
+     autocomplete="off"/><br/>
+     <input type="email" name = "email" placeholder="email"
+      class ="form-control" 
+      value="<%= typeof email != 'undefined' ? email :   '' %>"
+      id ="email" autocomplete="off"/><br/>
+    <input type="password" name = "password" 
+    placeholder="password" class ="form-control" 
+    value="<%= typeof password != 'undefined' ? password :   '' %>"
+    id="password" autocomplete="off"/><br/>
+    <input type="password" name = "password2" 
+    placeholder="confirm password" class ="form-control" 
+    value="<%= typeof password2 != 'undefined' ? password2 :   '' %>"
+    id="password2" autocomplete="off"/><br/>
+    <input type ="submit" value ="submit" class="btn bg-dark w-25 mt-3 text-light mb-3"/>
+    </form>
+     <p>Have an account?<a href="login" >Login</a></p>
+     </div>
+   </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<% if(typeof errors !=='undefined') { %>
+ <% errors.forEach((error)=>{ %>
+      <div class="text-danger">
+          <%= error.msg %>  
+      </div>
+     <% }); %>
+<% } %>
+
+<% if(success_msg !=='') { %>
+     <div class="text-success">
+          <%= success_msg %>  
+      </div>
+<% } %>
+
+<% if(error_msg !=='') { %>
+     <div class="text-danger" style="font-weight: bold; border:2px black; color:red">
+          <%= error_msg %>  
+      </div>
+<% } %>
+
+<% if(error !=='') { %>
+     <div class="text-danger" style="font-weight: bold; border:2px black; color:red">
+          <%= error %>  
+      </div>
+<% } %>
