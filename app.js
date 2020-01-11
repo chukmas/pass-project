@@ -1,3 +1,6 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 const express = require("express")
 const app = express()
 const index = require("./routes/index")
@@ -7,7 +10,7 @@ const mongoose = require("mongoose")
 const flash = require("connect-flash")
 const session = require("express-session")
 const passport = require("passport")
-require("dotenv/config")
+// require("dotenv/config")
 require("./config/passport")(passport);
 
 app.use(expressLayouts)
